@@ -1,52 +1,66 @@
 {
-  "$schema": "https://wixplosives.github.io/codux-config-schema/codux.config.schema.json",
-  "boardGlobalSetup": "./_codux/board-global-setup.ts",
-  "componentsDiscovery": {
-    "include": ["src/**"],
-    "exclude": ["_codux/component-templates/**"]
-  },
-  "boardsPath": "_codux/boards",
-  "newComponent": {
-    "componentsPath": "src/components",
-    "templatesPath": "_codux/component-templates"
-  },
-  "safeRender": {
-    "maxInstancesPerComponent": 1000
-  },
-  "scripts": {
-    "install": {
-      "title": "Install",
-      "description": "Run install",
-      "command": "npm i",
-      "trigger": ["checkout", "pull", "setup"]
+    "$schema": "https://wixplosives.github.io/codux-config-schema/codux.config.schema.json",
+    "boardGlobalSetup": "./_codux/board-global-setup.ts",
+    "componentsDiscovery": {
+        "include": [
+            "src/**"
+        ],
+        "exclude": [
+            "_codux/component-templates/**"
+        ]
+    },
+    "boardsPath": "_codux/boards",
+    "newComponent": {
+        "componentsPath": "src/components",
+        "templatesPath": "_codux/component-templates"
+    },
+    "safeRender": {
+        "maxInstancesPerComponent": 1000
+    },
+    "scripts": {
+        "install": {
+            "title": "Install",
+            "description": "Run install",
+            "command": "npm i",
+            "trigger": [
+                "checkout",
+                "pull",
+                "setup"
+            ]
+        }
+    },
+    "styling": {
+        "solution": "scss modules"
+    },
+    "styleFilesConfig": {
+        "commonStyleFilePattern": "**/src/styles/**"
+    },
+    "resolve": {
+        "alias": {
+            "@styles": "./src/styles",
+            "@styles/*": "./src/styles/*",
+            "/*": "./*",
+            "~/*": "./src/*",
+            "node:fs": false,
+            "node:fs/promises": false,
+            "node:path": false,
+            "node:crypto": false,
+            "crypto": false,
+            "node:stream": false,
+            "stream": false,
+            "node:os": false,
+            "node:util": false,
+            "node:events": false,
+            "node:url": false,
+            "node:buffer": false,
+            "node:assert": false
+        }
+    },
+    "svgLoader": "both",
+    "externalProviders": {
+        "wix": {
+            "projectId": "c5948ea7-bd43-4d0d-a24d-f8a28b168140",
+            "metaSiteId": "8d9270ec-87b9-42ef-b067-b198e682e57c"
+        }
     }
-  },
-  "styling": {
-    "solution": "scss modules"
-  },
-  "styleFilesConfig": {
-    "commonStyleFilePattern": "**/src/styles/**"
-  },
-  "resolve": {
-    "alias": {
-      "@styles": "./src/styles",
-      "@styles/*": "./src/styles/*",
-      "/*": "./*",
-      "~/*": "./src/*",
-      "node:fs": false,
-      "node:fs/promises": false,
-      "node:path": false,
-      "node:crypto": false,
-      "crypto": false,
-      "node:stream": false,
-      "stream": false,
-      "node:os": false,
-      "node:util": false,
-      "node:events": false,
-      "node:url": false,
-      "node:buffer": false,
-      "node:assert": false
-    }
-  },
-  "svgLoader": "both"
 }

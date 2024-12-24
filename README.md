@@ -1,6 +1,6 @@
 <div align="center">  
     <img height="50" src="./src/assets/svg/codux.svg">  
-    <h1>Remix template for "Codux"</h1>
+    <h1>Remix template for Codux</h1>
 </div>
 
 ### A Visual IDE for React Projects
